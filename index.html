@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ultron Orb</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="stage">
+    <h1 class="title">Ultron Orb</h1>
+
+    <div id="orb" class="orb idle" role="button" tabindex="0"
+         aria-label="Ultron Orb. Press to speak.">
+      <div class="orb-ring"></div>
+      <div class="orb-core"></div>
+    </div>
+
+    <p id="orb-status" role="status">Ready. Tap the Orb to speak.</p>
+
+    <div class="voice-controls">
+      <button id="mic-button" type="button">Talk to Ultron</button>
+      <button id="stop-button" type="button" class="secondary">Stop</button>
+    </div>
+
+    <p id="transcript" aria-live="polite"></p>
+
+    <form id="chat-form" autocomplete="off">
+      <label for="chat-input" class="sr-only">Type a message</label>
+      <input id="chat-input" type="text" maxlength="1000"
+             placeholder="Or type a message" />
+      <button type="submit">Send</button>
+    </form>
+
+    <p class="privacy">
+      Your words are sent to an AI service to get an answer. Browser speech
+      recognition may also process audio online.
+    </p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
